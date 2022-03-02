@@ -1,7 +1,2 @@
-Create a new git repository
-Create new project named onium in virtualenv
-Create a requirements.txt
-Create a superuser
-migrate bdd (ignore ds.sqlite)
-Create product app and start a simple db
+start a simple db
 Find a way to display the db with djangorestframework and/or django administration.
