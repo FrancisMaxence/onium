@@ -16,11 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 from rest_framework import routers
-from onium.users import views
+from onium.users.views import UserViewSet, GroupViewSet
+from onium.brands.views import BrandViewSet
 
 router = routers.DefaultRouter()
-router.register(r'users', views.UserViewSet)
-router.register(r'groups', views.GroupViewSet)
+router.register(r'users', UserViewSet)
+router.register(r'groups', GroupViewSet)
+router.register(r'brands', BrandViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
