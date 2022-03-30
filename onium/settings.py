@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'onium.brands',
     'onium.products',
+    'onium.suppliers',
 ]
 
 MIDDLEWARE = [

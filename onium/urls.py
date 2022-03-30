@@ -18,15 +18,21 @@ from django.urls import include, path
 from rest_framework import routers
 from onium.users.views import UserViewSet, GroupViewSet
 from onium.brands.views import BrandViewSet
+from onium.suppliers.views import SupplierViewSet
 
 router = routers.DefaultRouter()
+
+# Users
 router.register(r'users', UserViewSet)
 router.register(r'groups', GroupViewSet)
-router.register(r'brands', BrandViewSet)
 
+# Apps
+router.register(r'brands', BrandViewSet)
+router.register(r'suppliers', SupplierViewSet)
+
+# Url Patterns
 urlpatterns = [
     path('admin/', admin.site.urls),
-
     path('', include(router.urls)),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 ]
