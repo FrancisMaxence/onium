@@ -18,6 +18,7 @@ from django.urls import include, path
 from rest_framework import routers
 from onium.users.views import UserViewSet, GroupViewSet
 from onium.brands.views import BrandViewSet
+from onium.measure.views import MeasureViewSet
 from onium.suppliers.views import SupplierViewSet
 
 router = routers.DefaultRouter()
@@ -28,6 +29,7 @@ router.register(r'groups', GroupViewSet)
 
 # Apps
 router.register(r'brands', BrandViewSet)
+router.register(r'measure', MeasureViewSet)
 router.register(r'suppliers', SupplierViewSet)
 
 # Url Patterns
