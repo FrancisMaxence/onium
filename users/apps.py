@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class MeasureConfig(AppConfig):
+class UsersConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'onium.measure'
+    name = 'users'

@@ -15,11 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
+
 from rest_framework import routers
-from onium.users.views import UserViewSet, GroupViewSet
-from onium.brands.views import BrandViewSet
-from onium.measure.views import MeasureViewSet
-from onium.suppliers.views import SupplierViewSet
+
+from users.views import UserViewSet, GroupViewSet
+from brands.views import BrandViewSet
+from measures.views import MeasureViewSet
+from suppliers.views import SupplierViewSet
 
 router = routers.DefaultRouter()
 

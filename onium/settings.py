@@ -38,10 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'onium.brands',
-    'onium.measure',
-    'onium.products',
-    'onium.suppliers',
+    'brands',
+    'measures',
+    'products',
+    'suppliers',
 ]
 
 MIDDLEWARE = [

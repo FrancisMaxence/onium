@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class BrandsConfig(AppConfig):
+class MeasureConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'onium.brands'
+    name = 'measures'

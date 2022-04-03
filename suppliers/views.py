@@ -1,7 +1,7 @@
 from rest_framework import permissions, viewsets
 
-from onium.suppliers.models import Supplier
-from onium.suppliers.serializers import SupplierSerializer
+from suppliers.models import Supplier
+from suppliers.serializers import SupplierSerializer
 
 class SupplierViewSet(viewsets.ModelViewSet):
     queryset = Supplier.objects.all()

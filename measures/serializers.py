@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from onium.measure.models import Measure
+from measures.models import Measure
 
 class MeasureSerializer(serializers.ModelSerializer):
     class Meta:

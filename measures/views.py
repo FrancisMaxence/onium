@@ -1,7 +1,7 @@
 from rest_framework import permissions, viewsets
 
-from onium.measure.models import Measure
-from onium.measure.serializers import MeasureSerializer
+from measures.models import Measure
+from measures.serializers import MeasureSerializer
 
 class MeasureViewSet(viewsets.ModelViewSet):
     queryset = Measure.objects.all()
