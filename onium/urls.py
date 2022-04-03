@@ -27,12 +27,12 @@ router = routers.DefaultRouter()
 
 # Users
 router.register(r'users', UserViewSet)
-router.register(r'groups', GroupViewSet)
+router.register(r'groups', GroupViewSet, basename='groups')
 
 # Apps
-router.register(r'brands', BrandViewSet)
-router.register(r'measure', MeasureViewSet)
-router.register(r'suppliers', SupplierViewSet)
+router.register(r'brands', BrandViewSet, basename='brands')
+router.register(r'measures', MeasureViewSet, basename='measures')
+router.register(r'suppliers', SupplierViewSet, basename='suppliers')
 
 # Url Patterns
 urlpatterns = [
