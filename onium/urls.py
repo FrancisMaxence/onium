@@ -23,6 +23,7 @@ from users.views import UserViewSet, GroupViewSet
 from brands.views import BrandViewSet
 from departments.views import DepartmentViewSet
 from measures.views import MeasureViewSet
+from products.views import ProductViewSet
 from suppliers.views import SupplierViewSet
 
 router = routers.DefaultRouter()
@@ -35,6 +36,7 @@ router.register(r'groups', GroupViewSet)
 router.register(r'brands', BrandViewSet, basename='brands')
 router.register(r'departments', DepartmentViewSet, basename='departments')
 router.register(r'measures', MeasureViewSet, basename='measures')
+router.register(r'products', ProductViewSet, basename='products')
 router.register(r'suppliers', SupplierViewSet, basename='suppliers')
 
 # Url Patterns
