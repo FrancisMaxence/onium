@@ -5,3 +5,5 @@ from brands.models import Brand
 @admin.register(Brand)
 class BrandAdmin(admin.ModelAdmin):
     list_display = ('name',)
+    fields = ('name',)
+    exclude = ('products',)
