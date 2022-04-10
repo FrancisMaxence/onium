@@ -8,8 +8,8 @@ from suppliers.models import Supplier
 class Product(models.Model):
     upc = models.IntegerField(unique=True)
     supplier_code = models.CharField(max_length=20, null=True, blank=True)
-    plu_code = models.IntegerField(unique=True, null=True, blank=True)
-    cash_register_code = models.IntegerField(unique=True, null=True, blank=True)
+    plu_code = models.IntegerField(null=True, blank=True) # Make it unique or delete it ?
+    cash_register_code = models.IntegerField(null=True, blank=True) # Make it unique or delete it ?
     brand = models.ForeignKey(Brand, on_delete=models.CASCADE, null=True, blank=True) # Make it mandatory !
     description = models.CharField(max_length=150)
     weight = models.DecimalField(max_digits=8, decimal_places=2, null=True, blank=True) # Make it mandatory !
