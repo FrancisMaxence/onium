@@ -6,7 +6,7 @@ from measures.models import Measure
 from suppliers.models import Supplier
 
 class Product(models.Model):
-    upc = models.IntegerField(unique=True)
+    upc = models.IntegerField()
     supplier_code = models.CharField(max_length=20, null=True, blank=True)
     # plu_code = models.IntegerField(null=True, blank=True) # Make it unique or delete it ?
     # cash_register_code = models.IntegerField(null=True, blank=True) # Make it unique or delete it ?
