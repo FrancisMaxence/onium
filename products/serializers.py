@@ -7,16 +7,16 @@ class ProductSerializer(serializers.ModelSerializer):
         model = Product
         fields = [
             'id', 
-            'upc', 
+            'upc',
             'supplier_code',
+            'description',
+        ]
             # 'plu_code',
             # 'cash_register_code',
             # 'brand',
-            'description',
             # 'weight',
             # 'case_size',
             # 'measure',
             # 'supplier',
             # 'department',
             # 'in_store'
-            ]
