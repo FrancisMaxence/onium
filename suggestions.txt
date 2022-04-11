@@ -1,7 +1,7 @@
 Add Status app and status (ForeignKey) to Products Model
 Status is for active, delisted, discontinued, etc...
 
-Fill Brands_brand, Measures_measure and Departments_department tables
+Fill Brands_brand, Measures_measure and Departments_department tables (Uncomment ForeignKey in Product model)
 Find a way to filter data in admin
 
 Configure shared network
