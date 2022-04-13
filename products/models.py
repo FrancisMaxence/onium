@@ -8,19 +8,22 @@ from suppliers.models import Supplier
 class Product(models.Model):
     upc = models.BigIntegerField(null=True, blank=True)
     supplier_code = models.CharField(max_length=20, null=True, blank=True)
-    # plu_code = models.IntegerField(null=True, blank=True) # Make it unique or delete it ?
-    # cash_register_code = models.IntegerField(null=True, blank=True) # Make it unique or delete it ?
-    # brand = models.ForeignKey(Brand, on_delete=models.CASCADE, null=True, blank=True) # Make it mandatory !
+    plu_code = models.IntegerField(null=True, blank=True) # Make it unique or delete it ?
+    cash_register_code = models.IntegerField(null=True, blank=True) # Make it unique or delete it ?
+    brand = models.ForeignKey(Brand, on_delete=models.CASCADE, null=True, blank=True) # Make it mandatory !
     description = models.CharField(max_length=150)
-    # weight = models.DecimalField(max_digits=8, decimal_places=2, null=True, blank=True) # Make it mandatory !
-    # measure = models.ForeignKey(Measure, on_delete=models.PROTECT, null=True, blank=True) # Make it mandatory !
-    # case_size = models.IntegerField(blank=True, default=1, null=True) # Make it mandatory !
-    # supplier = models.ForeignKey(Supplier, on_delete=models.PROTECT, null=True, blank=True) # Make it mandatory !
-    # department = models.ForeignKey(Department, on_delete=models.PROTECT, null=True, blank=True) # Make it mandatory !
-    # in_store = models.BooleanField(null=True, blank=True) # Make it mandatory !
+    weight = models.DecimalField(max_digits=8, decimal_places=2, null=True, blank=True) # Make it mandatory !
+    measure = models.ForeignKey(Measure, on_delete=models.PROTECT, null=True, blank=True) # Make it mandatory !
+    case_size = models.IntegerField(blank=True, default=1, null=True) # Make it mandatory !
+    supplier = models.ForeignKey(Supplier, on_delete=models.PROTECT, null=True, blank=True) # Make it mandatory !
+    department = models.ForeignKey(Department, on_delete=models.PROTECT, null=True, blank=True) # Make it mandatory !
+    in_store = models.BooleanField(null=True, blank=True) # Make it mandatory !
+
+    def __str__(self):
+        return f'{self.id} - {self.brand} {self.description} {self.weight} {self.measure}'
 
     class Meta:
         ordering = [
-            #'brand',
+            'brand',
             'description'
         ]

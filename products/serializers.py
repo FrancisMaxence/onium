@@ -10,13 +10,13 @@ class ProductSerializer(serializers.ModelSerializer):
             'upc',
             'supplier_code',
             'description',
+            'plu_code',
+            'cash_register_code',
+            'brand',
+            'weight',
+            'case_size',
+            'measure',
+            'supplier',
+            'department',
+            'in_store'
         ]
-            # 'plu_code',
-            # 'cash_register_code',
-            # 'brand',
-            # 'weight',
-            # 'case_size',
-            # 'measure',
-            # 'supplier',
-            # 'department',
-            # 'in_store'
