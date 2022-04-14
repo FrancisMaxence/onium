@@ -17,7 +17,7 @@ class Product(models.Model):
     case_size = models.IntegerField(blank=True, default=1, null=True) # Make it mandatory !
     supplier = models.ForeignKey(Supplier, on_delete=models.PROTECT, null=True, blank=True) # Make it mandatory !
     department = models.ForeignKey(Department, on_delete=models.PROTECT, null=True, blank=True) # Make it mandatory !
-    in_store = models.BooleanField(null=True, blank=True) # Make it mandatory !
+    in_store = models.BooleanField() # Make it mandatory !
 
     def __str__(self):
         return f'{self.id} - {self.brand} {self.description} {self.weight} {self.measure}'
