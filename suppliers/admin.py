@@ -4,5 +4,9 @@ from suppliers.models import Supplier
 
 @admin.register(Supplier)
 class SupplierAdmin(admin.ModelAdmin):
-    list_display = ('name',)
+    list_display = (
+        'name',
+        'return_policy',
+        'comments'
+    )
 
